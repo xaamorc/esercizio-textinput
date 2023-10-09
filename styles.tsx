@@ -13,12 +13,12 @@ export const styles = StyleSheet.create({
     padding: 10,
     borderColor: "black",
     borderWidth: 1,
+    borderRadius : 5,
   },
   text: {
     fontSize: 20,
     fontWeight: "bold",
     marginLeft: 30,
-    textAlignVertical: "auto",
     marginTop: 40,
   },
   image: {
@@ -51,7 +51,24 @@ export const styles = StyleSheet.create({
   button: {
     backgroundColor: "lightblue",
     padding: 10,
-    borderRadius: 5,
+    borderRadius: 40,
     marginTop: 10,
+    textAlign: "center",
+    borderColor : "black",
+    borderWidth : 1,
   },
+  buttonPressed : {
+    backgroundColor : "lightgreen",
+    padding : 10,
+    borderRadius : 40,
+    marginTop : 10,
+    textAlign : "center",
+    borderColor : "black",
+    borderWidth : 1,
+  },
+  loginText : {
+    textAlign : "center",
+    fontWeight : "bold",
+    fontSize : 20,
+  }
 });

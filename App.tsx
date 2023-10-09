@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Button, Image, ImageBackground, Text, TextInput, View } from "react-native";
+import { Button, Image, ImageBackground, Pressable, Text, TextInput, View } from "react-native";
 import { styles } from "./styles";
 import { useEffect, useState } from "react";
 
@@ -10,10 +10,19 @@ export default function App() {
     width: 0,
     height: 0,
   });
+  const [style, setStyle] = useState<any>(styles.button);
   const [text, setText] = useState("");
   const [text2, setText2] = useState("");
   const [onFocus, setOnFocus] = useState(styles.input);
   const [onFocus2, setOnFocus2] = useState(styles.input);
+
+  function buttonPressed(){
+    if (style == styles.button){
+      setStyle(styles.buttonPressed)
+    } else {
+      setStyle(styles.button)
+    }
+  }
 
   function login() {
     console.log(text);
@@ -61,7 +70,10 @@ export default function App() {
           onBlur={() => setOnFocus2(styles.input)}
           placeholder="Cognome"
         />
-        <Button title="Login" onPress={login} />
+        {/* <Button title="Login" onPress={login} /> */}
+        <Pressable style={style} onPress={login} onPressIn={buttonPressed} onPressOut={buttonPressed}>
+          <Text style={styles.loginText}>Login</Text>
+        </Pressable>
       </View>
       <StatusBar style="auto" />
     </ImageBackground>
