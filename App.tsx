@@ -31,7 +31,7 @@ export default function App() {
 
   useEffect(() => {
     Image.getSize("https://picsum.photos/100", (w, h) => {
-      console.log(w, h);
+      // console.log(w, h);
       setImageSize({
         width: w,
         height: h,

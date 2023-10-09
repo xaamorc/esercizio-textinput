@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   card: {
-    width: "40%",
+    width: "95%",
     backgroundColor: "white",
     padding: 10,
     borderColor: "black",
